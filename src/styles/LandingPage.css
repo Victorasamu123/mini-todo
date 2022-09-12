@@ -35,4 +35,9 @@
   .bouncing-loader > div:nth-child(3) {
     animation-delay: 0.4s;
   }
- 
+/* @media only screen and (max-width: 600px) {
+  .general-div{
+    width: 100% !important;
+    height: 100% !important;
+}
+  } */
