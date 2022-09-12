@@ -4,21 +4,29 @@ const Todo = () => {
     const [todo, settodo] = useState("");
     const [alltodo, setalltodo] = useState([]);
     useEffect(() => {
-      
+        if(localStorage.alltodos){
+
+            let localalltodos = JSON.parse(localStorage.alltodos);
+            setalltodo(localalltodos)
+        }else{
+            setalltodo([])
+        }
     }, [])
     
     const add=()=>{
         let todoObj ={todo}
         setalltodo(()=>{
-            [...alltodo,todoObj]
+        let recentTodo=[...alltodo,todoObj]
+        localStorage.alltodos=JSON.stringify(recentTodo)
+        return recentTodo
+        console.log(recentTodo)
         });
-        localStorage.alltodos=JSON.stringify(alltodo)
         settodo("")
         console.log(alltodo)
     }
-    const getData =()=>{
+    // const getData =()=>{
         
-    }
+    // }
   return (
     <>
       <div className="general-div">
