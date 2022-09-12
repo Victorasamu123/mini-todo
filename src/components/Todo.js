@@ -1,13 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/Todo.css"
 const Todo = () => {
     const [todo, settodo] = useState("");
     const [alltodo, setalltodo] = useState([]);
+    useEffect(() => {
+      
+    }, [])
+    
     const add=()=>{
         let todoObj ={todo}
-        setalltodo([...alltodo,todoObj]);
+        setalltodo(()=>{
+            [...alltodo,todoObj]
+        });
+        localStorage.alltodos=JSON.stringify(alltodo)
         settodo("")
         console.log(alltodo)
+    }
+    const getData =()=>{
+        
     }
   return (
     <>
