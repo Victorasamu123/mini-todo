@@ -36,6 +36,11 @@ const Todo = () => {
         let newAllTodo = [...alltodo];
         let filteredTodo = newAllTodo.filter((todo, index) => index != ind)
         setalltodo(filteredTodo)
+        setalltodo(()=>{
+            let recentTodo=[...filteredTodo,todoObj]
+            localStorage.alltodos=JSON.stringify(recentTodo)
+            return recentTodo
+            });
     }
     const editStudent=(index)=>{
         seteditIndex(index)
@@ -50,6 +55,11 @@ const Todo = () => {
         let newAllTodo=[...alltodo]
         newAllTodo[editIndex]=updatedDetails
         setalltodo(newAllTodo)
+        setalltodo(()=>{
+            let recentTodo=[...newAllTodo,todoObj]
+            localStorage.alltodos=JSON.stringify(recentTodo)
+            return recentTodo
+            });
 
     }
     // const getData =()=>{
