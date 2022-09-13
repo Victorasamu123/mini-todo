@@ -35,9 +35,8 @@ const Todo = () => {
     const delet = (ind) => {
         let newAllTodo = [...alltodo];
         let filteredTodo = newAllTodo.filter((todo, index) => index != ind)
-        setalltodo(filteredTodo)
         setalltodo(()=>{
-            let recentTodo=[...filteredTodo,todoObj]
+            let recentTodo=[...filteredTodo]
             localStorage.alltodos=JSON.stringify(recentTodo)
             return recentTodo
             });
@@ -54,9 +53,8 @@ const Todo = () => {
         }
         let newAllTodo=[...alltodo]
         newAllTodo[editIndex]=updatedDetails
-        setalltodo(newAllTodo)
         setalltodo(()=>{
-            let recentTodo=[...newAllTodo,todoObj]
+            let recentTodo=[...newAllTodo]
             localStorage.alltodos=JSON.stringify(recentTodo)
             return recentTodo
             });
