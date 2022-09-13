@@ -7,7 +7,7 @@ h1{
     height: 180px !important;
     background-color: black;
 }
-.btn{
+.btn1{
     background-color: rgb(29,18,128) !important;
     color: white !important;
 }
@@ -15,6 +15,13 @@ h1{
     width: 500px !important;
     height: 50px !important;
     background-color:rgb(29,18,128) !important ;
+}
+.todo{
+    margin-left: -350px;
+}
+.btn-div{
+    margin-top: -25px;
+    margin-left: 300px;
 }
 @media only screen and (max-width: 600px) {
     .todo-input-div{
@@ -24,8 +31,16 @@ h1{
         background-color: black;
     }
     .todo-carrieer{
-        width: 500px !important;
+        width: 280px !important;
         height: 50px !important;
         background-color:rgb(29,18,128) !important ;
+    }
+    .todo{
+        margin-left: -150px;
+    }
+    .btn-div{
+        margin-top: -25px;
+        margin-left: 130px;
+
     }
 }
