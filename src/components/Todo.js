@@ -37,6 +37,21 @@ const Todo = () => {
         let filteredTodo = newAllTodo.filter((todo, index) => index != ind)
         setalltodo(filteredTodo)
     }
+    const editStudent=(index)=>{
+        seteditIndex(index)
+        let selectedTodo=alltodo[index]
+        seteditedTodo(selectedTodo.todo)
+        seteditObject(selectedTodo)
+    }
+    const updateChanges=()=>{
+        let updatedDetails={
+            todo:editedTodo
+        }
+        let newAllTodo=[...alltodo]
+        newAllTodo[editIndex]=updatedDetails
+        setalltodo(newAllTodo)
+
+    }
     // const getData =()=>{
         
     // }
